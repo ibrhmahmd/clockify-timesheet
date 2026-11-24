@@ -15,13 +15,7 @@ Jira is reached through the Atlassian MCP; connect it with `/mcp` if it is not a
 
 ## How it works
 
-```text
- git commits ─┐
- Claude Code  ├─► activity per day ─► matched to Jira tickets ─► draft table ─► you approve ─► Clockify
- prompts     ─┘        (your timezone,      (keys + plain           (12-hour,                    │
- Jira tickets ────────  excluded projects    summary per             gaps shown)                 ▼
-                        removed)             ticket)                              Jira worklogs (on request)
-```
+![Git commits, Claude Code prompts and Jira tickets are collected and matched, drafted as real hours, approved by you, then posted to Clockify; Jira worklogs only when you ask](docs/flow.png)
 
 1. **Setup (first run only).** Claude asks your name, the emails you commit with, timezone, work days, where your repos live, your Clockify project, your fixed daily blocks (planning, stand-up) and which projects are not work. It writes `~/.config/clockify-timesheet/config.toml`; you paste your API key into it yourself, so the key never goes through the chat.
 2. **What's already logged.** It reads your Clockify entries for the range and keeps anything you logged yourself.
