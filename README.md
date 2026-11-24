@@ -5,7 +5,7 @@ A Claude Code skill that fills your Clockify timesheet with your **real** hours,
 ## Install
 
 ```bash
-git clone <this repo> ~/Desktop/skills/clockify-timesheet
+git clone https://github.com/ibrhmahmd/clockify-timesheet.git ~/Desktop/skills/clockify-timesheet
 ln -s ~/Desktop/skills/clockify-timesheet ~/.claude/skills/clockify-timesheet
 ```
 
