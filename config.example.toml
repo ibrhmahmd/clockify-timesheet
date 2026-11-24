@@ -1,0 +1,33 @@
+# Copy to ~/.config/clockify-timesheet/config.toml (setup does this for you).
+# This file holds your Clockify API key: keep it chmod 600 and never share it.
+
+name = "Your Name"                      # as Clockify shows it
+git_author = ["you@company.com"]        # every email you commit with; a bare name can match a colleague
+timezone = "Africa/Cairo"
+work_days = ["Sun", "Mon", "Tue", "Wed", "Thu"]
+repo_roots = ["~/Desktop"]              # every git repo directly under these folders is scanned
+exclude_projects = []                   # folder names (repo or Claude project folder) that are not work
+
+[clockify]
+api_key = ""                            # Clockify > Preferences > Advanced > Manage API keys
+project = "RightsHero Technical"
+billable = false
+
+[jira]
+site = "rightshero.atlassian.net"       # reached through the Atlassian MCP
+project = "RHD"
+
+[rules]
+max_entries = 4                         # per day besides fixed blocks; soft limit, see SKILL.md
+rest_minutes = 15                       # gaps up to this long are merged into the work around them
+
+# Blocks you log every work day. Delete them if you log none.
+[[fixed]]
+start = "09:00"
+end = "10:00"
+description = "reviewed the opened tickets on Jira planning for the next planned sprint\nlisted the stand up checklist"
+
+[[fixed]]
+start = "10:00"
+end = "10:30"
+description = "RH_Daily_Standup"
